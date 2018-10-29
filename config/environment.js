@@ -1,4 +1,4 @@
-const dbUri = require('mongodb://localhost/wdi-project-two');
+const dbUri = 'mongodb://localhost/wdi-project-two';
 const port = 4000;
 
 module.exports = {

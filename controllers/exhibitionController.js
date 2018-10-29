@@ -1,13 +1,13 @@
-const Exhibition = require('../models/Exhibition');
+const Exhibition = require('../models/exhibition');
 
 function indexRoute(req, res) {
-  Exhibition.
+  Exhibition
     .find()
     .then(result => {
       const exhibitionObject = {
         exhibitions: result
       };
-      res.render('index', exhibitionObject)
+      res.render('index', exhibitionObject);
     });
 }
 
