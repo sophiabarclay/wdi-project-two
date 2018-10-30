@@ -3,17 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Photography London</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
   <body>
     <ul>
       <li><a href="/login">Log In</a></li>
       <li><a href="/register">Regsiter</a></li>
     </ul>
-    <h1>Photography London</h1>
-    <ul>
-      <li><a href="/about">About</a></li>
-      <li><a href="/current-exhibitions">Current Exhibitions</a></li>
-    </ul>
-    <footer>Mady by Sophia Barclay</footer>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Photography London
+        </h1>
+        <h2 class="subtitle has-text-centered">
+          All the latest from London's photography scene
+        </h2>
+      </div>
+    </div>
+  </section>
+    <%- body %>
+    <footer class="footer has-text-centered">Made by Sophia Barclay</footer>
   </body>
 </html>

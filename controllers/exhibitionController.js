@@ -7,11 +7,21 @@ function indexRoute(req, res) {
       const exhibitionObject = {
         exhibitions: result
       };
-      res.render('index', exhibitionObject);
+      console.log('===>', exhibitionObject);
+      res.render('exhibitions/index', exhibitionObject);
+    });
+}
+
+function showRoute(req, res) {
+  Exhibition
+    .findById(req.params.id)
+    .then(result => {
+      res.render('exhibitions/show', result);
     });
 }
 
 
 module.exports = {
-  indexRoute: indexRoute
+  indexRoute: indexRoute,
+  showRoute: showRoute
 };

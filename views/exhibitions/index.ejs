@@ -1,0 +1,11 @@
+<h2>Upcoming Exhibitions</h2>
+<div class="exhibitionGrid">
+  <% exhibitions.forEach(exhibition => {%>
+    <a href="/exhibitions/<%= exhibition.id %>">
+    <img width="300px" height="200px" src="<%= exhibition.image %>" />
+    <h2><%= exhibition.name %></h2>
+    </a>
+    <p><%= exhibition.location %>,</p>
+    <p><%= exhibition.address %></p>
+    <% }) %>
+</div>

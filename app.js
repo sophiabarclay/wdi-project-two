@@ -24,8 +24,8 @@ app.use(methodOverride('_method'));
 
 
 // Auth
-const auth = require('./lib/auth');
-app.use('*', auth.checkAuthStatus);
+// const auth = require('./lib/auth');
+// app.use('*', auth.checkAuthStatus);
 
 // Routes
 const router = require('./config/routes');
