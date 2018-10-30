@@ -1,1 +1,42 @@
-<h1>New EJS</h1>
+<h1 class="is-size-2">Add a new Exhibition</h1>
+<form action="/exhibitions" method="post">
+  <div class="field">
+    <label class="label">Exhibition</label>
+    <div class="control">
+      <input class="input" name="name" type="text" placeholder="e.g. Arthur Elgort">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Gallery/Museum</label>
+    <div class="control">
+      <input class="input" name="location" type="text" placeholder="e.g. Atlas Gallery">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Address</label>
+    <div class="control">
+      <input class="input" name="address" type="text" placeholder="e.g. 49 Dorset St, London W1U 7NF">
+    </div>
+  </div>
+
+  <div class="file">
+    <label class="label">Image</label>
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Choose a file…
+        </span>
+      </span>
+    </label>
+  </div>
+
+  <div class="control">
+    <button class="button is-light">Submit</button>
+  </div>
+</form>

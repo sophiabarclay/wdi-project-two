@@ -21,11 +21,13 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
 // Session
+const session = require('express-session');
+app.use(session({ secret: 'photos!!!', resave: false, saveUninitialized: false }));
 
 
-// Auth
-// const auth = require('./lib/auth');
-// app.use('*', auth.checkAuthStatus);
+// // Auth
+const auth = require('./lib/auth');
+app.use('*', auth.checkAuthStatus);
 
 // Routes
 const router = require('./config/routes');
