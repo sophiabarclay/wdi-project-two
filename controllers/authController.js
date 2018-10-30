@@ -31,9 +31,16 @@ function loginRoute(req, res) {
     });
 }
 
+function logoutRoute(req, res) {
+  req.session.regenerate(function() {
+    res.redirect('/');
+  });
+}
+
 module.exports = {
   registerFormRoute: registerFormRoute,
   registerRoute: registerRoute,
   loginFormRoute: loginFormRoute,
-  loginRoute: loginRoute
+  loginRoute: loginRoute,
+  logoutRoute: logoutRoute
 };

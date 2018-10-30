@@ -9,13 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
   </head>
   <body>
-    <div class="columns is-uppercase">
-      <h1 class="hero title column is-9"><a href="/">Photography London</a></h1>
-      <p class="column is-1"><a href="/new">Add New</a></p>
-      <p class="column is-1"><a href="/login">Log In</a></p>
-      <p class="column is-1"><a href="/register">Regsiter</a></p>
+    <% include ./partials/header %>
+    <div class="container">
+      <%- body %>
     </div>
-    <%- body %>
-    <footer class="footer has-text-centered">Made by Sophia Barclay</footer>
+    <% include ./partials/footer %>
   </body>
 </htm>

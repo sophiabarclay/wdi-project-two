@@ -1,3 +1,7 @@
-body {
+* {
   font-family: 'Heebo', sans-serif;
+}
+
+.loginForm {
+  margin: 5px;
 }
