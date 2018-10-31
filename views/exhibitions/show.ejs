@@ -1,8 +1,46 @@
-<h1 class="is-size-3"><%= name %></h1>
-<img width="700px" height="500px" src="<%= image %>" />
-<p><%= location %> </p>
-<p><%= address %> </p>
-<a class="button" href="/exhibitions/<%= _id %>/edit">Edit</a>
-<form class="" action="/exhibitions/<%= _id %>?_method=DELETE" method="post">
-  <button class="button">Delete</button>
-</form>
+<div class="columns">
+  <%# SHOW EHXIBITION %>
+  <div class="column is-6">
+    <h1 class="is-size-3"><%= name %></h1>
+    <img width="700px" height="500px" src="<%= image %>" />
+    <p><%= location %> </p>
+    <p><%= address %> </p>
+    <a class="button" href="/exhibitions/<%= _id %>/edit">Edit</a>
+    <form class="" action="/exhibitions/<%= _id %>?_method=DELETE" method="post">
+      <button class="button">Delete</button>
+    </form>
+  </div>
+  <%# COMMENT SECTION %>
+  <div class="column is-6">
+    <% ratings.forEach(rating => { %>
+      <div class="ratingBox">
+        <div class="ratingText">
+          <li><strong><%= rating.user %></strong></li>
+          <li><%= rating.content %></li>
+          <li><%= '❤️'.repeat(rating.rating) %></li>
+        </div>
+        <div class="ratingButton">
+          <li>
+            <form method="POST" action="/exhibitons/<%= _id %>/ratings/<%= rating._id %>?_method=DELETE">
+              <button class="xButton">x</button>
+            </form>
+          </li>
+        </div>
+      </div>
+    <% }) %>
+
+    <% if(locals.isLoggedIn) { %>
+      <form action='/exhibitions/<%= id %>/ratings' method="post">
+        <label for='user'>User </label>
+        <input name='user' value='<%= locals.currentUser.username %>' hidden/>
+        <label for='rating'>Rating (1 to 10) </label>
+        <input name='rating' type='Number' min='1' max='10'/>
+        <br />
+        <label for='content'>Comments </label>
+        <textarea name='content'></textarea>
+        <button>Submit rating</button>
+      </form>
+    <% } %>
+
+  </div>
+</div>

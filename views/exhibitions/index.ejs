@@ -1,7 +1,7 @@
 <h2 class="is-size-3">Upcoming Exhibitions</h2>
-<div class="columns">
+<div class="columns is-multiline">
   <% exhibitions.forEach(exhibition => {%>
-    <div class="column">
+    <div class="column is-4">
     <a href="/exhibitions/<%= exhibition.id %>">
     <img width="400px" height="300px" src="<%= exhibition.image %>" />
     <h2><%= exhibition.name %></h2>
