@@ -21,21 +21,13 @@
     </div>
   </div>
 
-<%#
-  <div class="file">
-    <label class="label">Image</label>
-    <label class="file-label">
-      <input class="file-input" type="file" name="resume">
-      <span class="file-cta">
-        <span class="file-icon">
-          <i class="fas fa-upload"></i>
-        </span>
-        <span class="file-label">
-          Choose a file…
-        </span>
-      </span>
-    </label>
-  </div> %>
+  <div class="field">
+    <label for="name">Image (URL)</label>
+    <div class="control">
+      <input class="input" name="image"  id="name" placeholder="http://..." value="<%= image %>">
+    </div>
+  </div>
+
 
   <div class="control">
     <button class="button is-light">Update</button>

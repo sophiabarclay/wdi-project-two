@@ -30,7 +30,7 @@ function newRoute(req, res) {
 function createRoute(req, res) {
   Exhibition
     .create(req.body)
-    .then(() => res.redirect('/'));
+    .then(result => res.redirect(`/cocktails/${result._id}`));
 }
 
 // UPDATE
@@ -57,15 +57,15 @@ function deleteRoute(req, res) {
   Exhibition
     .findByIdAndDelete(req.params.id)
     .then(() => {
-      res.redirect('/');
+      res.redirect('/exhibitions');
     });
 }
 
 module.exports = {
   indexRoute: indexRoute,
-  showRoute: showRoute,
   newRoute: newRoute,
   createRoute: createRoute,
+  showRoute: showRoute,
   updateRoute: updateRoute,
   editRoute: editRoute,
   deleteRoute: deleteRoute
