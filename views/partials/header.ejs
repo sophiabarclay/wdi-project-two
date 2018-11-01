@@ -1,10 +1,13 @@
-<div class="columns is-uppercase">
-  <h1 class="hero title column is-8"><a href="/">Photography London</a></h1>
-  <p class="column is-1"><a href="/exhibitions/new">Add New</a></p>
-  <% if(locals.isLoggedIn) { %>
-    <p class="column is-1"><a href="/logout">Log Out</a></p>
-  <% } else { %>
-    <p class="column is-1"><a href="/login">Log In</a></p>
-    <p class="column is-1"><a href="/register">Register</a></p>
-  <% } %>
+<div class="navbar columns is-uppercase">
+  <div class="navbar-brand">
+    <h1 class="title column is-size-1 logo"><a href="/">Photography London</a></h1>
+  </div>
+  <div class="navbar-end">
+    <% if(locals.isLoggedIn) { %>
+      <p class="column"><a href="/logout">Log Out</a></p>
+      <% } else { %>
+        <p class="column"><a href="/login">Log In</a></p>
+        <p class="column"><a href="/register">Register</a></p>
+      <% } %>
+  </div>
 </div>

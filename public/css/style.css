@@ -1,7 +1,69 @@
-* {
-  font-family: 'Heebo', sans-serif;
+body {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+
+/* HEADER */
+a {
+  color: black;
+}
+
+.navbar {
+  margin: 10px 40px;
+}
+
+.logo {
+  letter-spacing: -5px;
+  word-spacing: 10px;
+}
+/* FOOTER */
+.footer {
+  background-color: white;
+  padding-bottom: 30px;
+}
+
+/* INDEX */
+.indexMain {
+  margin: 0 0 0 50px;
+}
+
+i {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* SHOW PAGE */
+.showPage {
+  margin: 0 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.showPageInfo {
+  margin: 20px 0;
+}
+
+.showPageHeading {
+  margin-left: 50px;
 }
 
 .loginForm, .button {
   margin: 5px;
 }
+
+li {
+  list-style-type: none;
+}
+
+
+/* color: #F07840;
+color: #6CC7C3;
+color: #EE606F;
+color: #4EB8C0;
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Heebo', sans-serif; */

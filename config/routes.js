@@ -11,6 +11,7 @@ router.post('/login', authController.loginRoute);
 router.get('/logout', authController.logoutRoute);
 
 router.post('/exhibitions/:id/ratings', secureRoute, ratingsController.createRating);
+router.delete('/exhibitions/:id/ratings/:id', secureRoute, ratingsController.deleteRating);
 
 router.get('/', exhibitionController.indexRoute);
 router.get('/exhibitions/new', secureRoute, exhibitionController.newRoute);
@@ -20,6 +21,5 @@ router.put('/exhibitions/:id', secureRoute, exhibitionController.updateRoute);
 router.get('/exhibitions/:id/edit', secureRoute, exhibitionController.editRoute);
 router.delete('/exhibitions/:id', secureRoute, exhibitionController.deleteRoute);
 
-router.delete('/exhibitions/:id/ratings/:id', secureRoute, ratingsController.deleteRating);
 
 module.exports = router;

@@ -1,13 +1,23 @@
-<h2 class="is-size-3">Upcoming Exhibitions</h2>
-<div class="columns is-multiline">
-  <% exhibitions.forEach(exhibition => {%>
-    <div class="column is-4">
-    <a href="/exhibitions/<%= exhibition.id %>">
-    <img width="400px" height="300px" src="<%= exhibition.image %>" />
-    <h2><%= exhibition.name %></h2>
-    </a>
-    <p><%= exhibition.location %></p>
-    <p><%= exhibition.address %></p>
+<div class="indexMain">
+  <h2 class="is-size-3">Upcoming Exhibitions</h2>
+  <div class="columns">
+    <div class="column is-11 columns is-multiline">
+      <% exhibitions.forEach(exhibition => {%>
+        <div class="column is-4">
+        <a href="/exhibitions/<%= exhibition.id %>">
+        <figure class="image is-5by4">
+          <img src="<%= exhibition.image %>" />
+        </figure>
+        <h2><%= exhibition.name %></h2>
+        <p><%= exhibition.location %></p>
+        <p><%= exhibition.address %></p>
+        <p>Ends <%= exhibition.endDate %></p>
+        </a>
+        </div>
+        <% }) %>
+      </div>
+      <div class="column is-1">
+        <a href="/exhibitions/new"><i class="fas fa-plus"></i></a>
+      </div>
     </div>
-    <% }) %>
 </div>

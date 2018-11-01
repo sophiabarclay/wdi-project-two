@@ -4,12 +4,14 @@ const exhibitionSchema = mongoose.Schema({
   name: String,
   location: String,
   address: String,
+  startDate: String,
+  endDate: String,
   image: String,
   ratings: [
     {
-      comment: String,
-      username: String,
-      score: Number
+      user: String,
+      rating: Number,
+      content: String
     }
   ]
 });

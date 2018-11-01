@@ -2,10 +2,11 @@ const Exhibition = require('../models/exhibition');
 
 function createRating(req, res) {
   Exhibition
-    .findById(req.params.exhibitionId)
+    .findById(req.params.id)
     .then(exhibition => {
+      console.log('found this =>', exhibition);
       exhibition.ratings.push(req.body);
-      exhibition.save().then(() => res.redirect(`/exhibitions/${exhibition.id}`)) ;
+      exhibition.save().then(exhibition => res.redirect(`/exhibitions/${exhibition.id}`)) ;
     });
 }
 
