@@ -1,4 +1,4 @@
-<div class="columns">
+<div class="showPage columns">
   <%# SHOW EHXIBITION %>
   <div class="column is-6">
     <h1 class="is-size-3"><%= name %></h1>
@@ -13,13 +13,13 @@
   <%# COMMENT SECTION %>
   <div class="column is-6">
     <% ratings.forEach(rating => { %>
-      <div class="ratingBox">
-        <div class="ratingText">
+      <div class="commentBox">
+        <div class="commentText">
           <li><strong><%= rating.user %></strong></li>
           <li><%= rating.content %></li>
-          <li><%= '❤️'.repeat(rating.rating) %></li>
+          <li><%= 'O'.repeat(rating.rating) %></li>
         </div>
-        <div class="ratingButton">
+        <div class="commentButton">
           <li>
             <form method="POST" action="/exhibitons/<%= _id %>/ratings/<%= rating._id %>?_method=DELETE">
               <button class="xButton">x</button>
@@ -44,3 +44,6 @@
 
   </div>
 </div>
+
+<%# NOTE Show edit and delete buttons while user isLoggedIn ? best practice %>
+<%#  NOTE Comment vs Rating in Bulma class="" e.g. commentBox commentText %>

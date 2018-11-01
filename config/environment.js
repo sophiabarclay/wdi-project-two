@@ -1,7 +1,5 @@
-const dbUri = 'mongodb://localhost/wdi-project-two';
-const port = 4000;
+const port = process.envPORT || 4000;
+const dbUri = process.env.MONGODB_URI ||
+'mongodb://localhost/wdi-project-two';
 
-module.exports = {
-  dbUri: dbUri,
-  port: port
-};
+module.exports = { port, dbUri };
