@@ -11,7 +11,7 @@ router.post('/login', authController.loginRoute);
 router.get('/logout', authController.logoutRoute);
 
 router.post('/exhibitions/:id/ratings', secureRoute, ratingsController.createRating);
-router.delete('/exhibitions/:id/ratings/:id', secureRoute, ratingsController.deleteRating);
+router.delete('/exhibitions/:id/ratings/:ratingId', secureRoute, ratingsController.deleteRating);
 
 router.get('/', exhibitionController.indexRoute);
 router.get('/exhibitions/new', secureRoute, exhibitionController.newRoute);

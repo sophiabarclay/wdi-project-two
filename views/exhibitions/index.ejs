@@ -1,5 +1,5 @@
 <div class="indexMain">
-  <h2 class="is-size-3">Upcoming Exhibitions</h2>
+  <h3 class="is-size-3">Upcoming Exhibitions</h2>
   <div class="columns">
     <div class="column is-11 columns is-multiline">
       <% exhibitions.forEach(exhibition => {%>
@@ -8,10 +8,12 @@
         <figure class="image is-5by4">
           <img src="<%= exhibition.image %>" />
         </figure>
-        <h2><%= exhibition.name %></h2>
-        <p><%= exhibition.location %></p>
-        <p><%= exhibition.address %></p>
-        <p>Ends <%= exhibition.endDate %></p>
+        <div class="indexPageInfo">
+          <h2><%= exhibition.name %></h2>
+          <p><%= exhibition.location %></p>
+          <p><%= exhibition.address %></p>
+          <p>Ends: <%= exhibition.endDate %></p>
+        </div>
         </a>
         </div>
         <% }) %>

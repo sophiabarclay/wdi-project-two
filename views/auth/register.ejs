@@ -1,44 +1,37 @@
-<form class="container" action="/register" method="post">
-
-  <div class="field">
-    <label class="label">Username</label>
-    <div class="control has-icons-left has-icons-right">
-      <input class="input" type="text" placeholder="johnsmith">
-      <span class="icon is-small is-left">
-        <i class="fas fa-user"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-check"></i>
-      </span>
+<div class="columns is-centered">
+  <form class="formBox column is-one-quarter" action="/register" method="post">
+    <h3 class="is-size-2 is-text-centered">Register</h3>
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control has-icons-left">
+        <input class="input" type="text" placeholder="johnsmith">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </div>
     </div>
-    <%# <p class="help is-success">This username is available</p> %>
-  </div>
 
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control has-icons-left has-icons-right">
-      <input class="input" type="email" placeholder="john@johnsmith.com">
-      <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-exclamation-triangle"></i>
-      </span>
+    <div class="field">
+      <label class="label">Email Address</label>
+      <div class="control has-icons-left">
+        <input class="input" type="email" placeholder="john@johnsmith.com">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </div>
     </div>
-    <%# <p class="help is-danger">This email is invalid</p> %>
-  </div>
 
-  <div class="field">
-    <label class="label">Password</label>
-    <p class="control has-icons-left">
-      <input class="input" type="password" placeholder="Password">
-      <span class="icon is-small is-left">
-        <i class="fas fa-lock"></i>
-      </span>
-    </p>
-  </div>
+    <div class="field">
+      <label class="label">Password</label>
+      <p class="control has-icons-left">
+        <input class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
 
-  <div class="column is-1 field">
-    <button class="button">Submit</button>
-  </div>
-</form>
+      <button class="button">Submit</button>
+  </form>
+
+</div>

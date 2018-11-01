@@ -1,7 +1,9 @@
-<h2 class="showPageHeading is-size-3"><%= name %></h2>
+<h3 class="showPageHeading is-size-3">
+  <%= name %>
+</h3>
 <div class="showPage columns">
   <%# SHOW EHXIBITION %>
-  <div class="column is-8">
+  <div class="column is-7">
     <figure class="image is-5by4">
       <img src="<%= image %>" />
     </figure>
@@ -9,19 +11,23 @@
       <p class="is-size-4"><%= location %> | <%= address %></p>
       <p class="is-size-5">Ends <%= endDate %></p>
     </div>
-    <a class="button" href="/exhibitions/<%= _id %>/edit">Edit</a>
-    <form class="" action="/exhibitions/<%= _id %>?_method=DELETE" method="post">
-      <button class="button">Delete</button>
-    </form>
+    <div class="showPageButtons columns">
+      <a href="/exhibitions/<%= _id %>/edit"><i class="far fa-edit"></i></a>
+      <form class="" action="/exhibitions/<%= _id %>?_method=DELETE" method="post">
+        <button><i class="far fa-trash-alt"></i></button>
+      </form>
+    </div>
+
   </div>
+
   <%# COMMENT SECTION %>
-  <div class="commentSection column is-4">
+  <div class="ratingSection column is-5">
     <% if(locals.isLoggedIn) { %>
       <form action='/exhibitions/<%= id %>/ratings' method="post">
-      <h2 class="is-size-4">Leave a review</h2>
+      <h3 class="is-size-4">Leave a review</h3>
       <div class="columns">
         <label class="has-text-right column is-4" for='user'>Username</label>
-        <input class="column is-8 input" name='user' value='<%= locals.currentUser.username %>' hidden/>
+        <input class="column is-8 input" name='user' value='<%= locals.currentUser.username %>'/>
       </div>
       <div class="columns">
         <label class="has-text-right column is-4" for='rating'>Rating (1 to 10) </label>
@@ -31,17 +37,24 @@
         <label class="has-text-right column is-4" for='content'>Comments </label>
         <input class="column is-8 input" name='content'></textarea>
       </div>
-      <button class="button">Submit</button>
+      <div class="columns">
+      <div class="column is-4"></div>
+      <div class="column is-8"><button class="button reviewSubmitButton">Submit</button></div>
+      </div>
       </form>
+      <% } else { %>
+        <h3 class="is-size-4">Leave a review</h3>
+        <p>Please <a href="/login"><strong>log in</strong></a> to leave a review of this exhibition.</p>
       <% } %>
     <hr>
 
-      <h2 class="is-size-4">Visitor Reviews</h2>
+      <h3 class="is-size-4">Visitor Reviews</h3>
+      <% if(locals.isLoggedIn) { %>
       <% ratings.forEach(rating => { %>
         <div class="ratingBox columns">
           <div class="ratingButton column is-1">
             <form method="POST" action="/exhibitons/<%= _id %>/ratings/<%= rating._id %>?_method=DELETE">
-              <button class="delete"></button>
+              <button><i class="far fa-trash-alt"></i></button>
             </form>
           </div>
           <div class="ratingText column is-11">
@@ -50,10 +63,20 @@
             <li><%= rating.rating %>/10</li>
           </div>
         </div>
-        <% }) %>
+        <% })
+      } else { %>
+        <% ratings.forEach(rating => { %>
+          <div class="ratingText">
+            <li><strong><%= rating.user %></strong></li>
+            <li><%= rating.content %></li>
+            <li><%= rating.rating %>/10</li>
+          </div>
+          <% })
+        } %>
+
 
   </div>
 </div>
 
 <%# NOTE Show edit and delete buttons while user isLoggedIn ? best practice %>
-<%#  NOTE Comment vs Rating in Bulma class="" e.g. ratingBox commentText %>
+<%#  NOTE Comment vs Rating in Bulma class="" e.g. ratingBox ratingText %>

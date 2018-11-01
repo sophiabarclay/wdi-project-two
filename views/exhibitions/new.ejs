@@ -1,34 +1,38 @@
-<h1 class="is-size-2">Add a new Exhibition</h1>
-<form action="/exhibitions" method="post">
-  <div class="field">
-    <label class="label">Exhibition</label>
-    <div class="control">
-      <input class="input" name="name" type="text" placeholder="e.g. Arthur Elgort">
-    </div>
-  </div>
+<div class="columns is-centered">
+  <div class="formBox column is-one-third">
+    <h3 class="is-size-2">Add a new Exhibition</h3>
+    <form action="/exhibitions" method="post">
+      <div class="field">
+        <label class="label">Exhibition</label>
+        <div class="control">
+          <input class="input" name="name" type="text" placeholder="e.g. Arthur Elgort">
+        </div>
+      </div>
 
-  <div class="field">
-    <label class="label">Gallery/Museum</label>
-    <div class="control">
-      <input class="input" name="location" type="text" placeholder="e.g. Atlas Gallery">
-    </div>
-  </div>
+      <div class="field">
+        <label class="label">Gallery/Museum</label>
+        <div class="control">
+          <input class="input" name="location" type="text" placeholder="e.g. Atlas Gallery">
+        </div>
+      </div>
 
-  <div class="field">
-    <label class="label">Address</label>
-    <div class="control">
-      <input class="input" name="address" type="text" placeholder="e.g. 49 Dorset St, London W1U 7NF">
-    </div>
-  </div>
+      <div class="field">
+        <label class="label">Address</label>
+        <div class="control">
+          <input class="input" name="address" type="text" placeholder="e.g. 49 Dorset St, London W1U 7NF">
+        </div>
+      </div>
 
-  <div class="field">
-    <label for="name">Image (URL)</label>
-    <div class="control">
-      <input class="input" name="image"  id="name" placeholder="http://...">
-    </div>
-  </div>
+      <div class="field">
+        <label for="name">Image (URL)</label>
+        <div class="control">
+          <input class="input" name="image"  id="name" placeholder="http://...">
+        </div>
+      </div>
 
-  <div class="control">
-    <button class="button is-light">Submit</button>
+      <div class="control">
+        <button class="button is-light">Submit</button>
+      </div>
+    </form>
   </div>
-</form>
+</div>

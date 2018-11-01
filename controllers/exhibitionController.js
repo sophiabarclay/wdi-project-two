@@ -17,7 +17,6 @@ function showRoute(req, res) {
   Exhibition
     .findById(req.params.id)
     .then(result => {
-      console.log(result);
       res.render('exhibitions/show', result);
     });
 }

@@ -1,34 +1,38 @@
-<h1 class="is-size-2">Edit</h1>
-<form action="/exhibitions/<%= _id %>?_method=PUT" method="post">
-  <div class="field">
-    <label class="label">Exhibition</label>
-    <div class="control">
-      <input class="input" name='name' type="text" value="<%= name %>">
-    </div>
-  </div>
+<div class="columns is-centered">
+  <div class="formBox column is-one-third">
+    <h1 class="is-size-2">Edit</h1>
+    <form action="/exhibitions/<%= _id %>?_method=PUT" method="post">
+      <div class="field">
+        <label class="label">Exhibition</label>
+        <div class="control">
+          <input class="input" name='name' type="text" value="<%= name %>">
+        </div>
+      </div>
 
-  <div class="field">
-    <label class="label">Gallery/Museum</label>
-    <div class="control">
-      <input class="input" name='location' type="text" value="<%= location %>">
-    </div>
-  </div>
+      <div class="field">
+        <label class="label">Gallery/Museum</label>
+        <div class="control">
+          <input class="input" name='location' type="text" value="<%= location %>">
+        </div>
+      </div>
 
-  <div class="field">
-    <label class="label">Address</label>
-    <div class="control">
-      <input class="input" name='address' type="text" value="<%= address %>">
-    </div>
-  </div>
+      <div class="field">
+        <label class="label">Address</label>
+        <div class="control">
+          <input class="input" name='address' type="text" value="<%= address %>">
+        </div>
+      </div>
 
-  <div class="field">
-    <label for="name">Image (URL)</label>
-    <div class="control">
-      <input class="input" name="image"  id="name" placeholder="http://..." value="<%= image %>">
-    </div>
-  </div>
+      <div class="field">
+        <label for="name">Image (URL)</label>
+        <div class="control">
+          <input class="input" name="image"  id="name" placeholder="http://..." value="<%= image %>">
+        </div>
+      </div>
 
-  <div class="control">
-    <button class="button is-light">Update</button>
+      <div class="control">
+        <button class="button is-light">Update</button>
+      </div>
+    </form>
   </div>
-</form>
+</div>

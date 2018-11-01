@@ -1,7 +1,26 @@
-<div class="columns">
-  <form class="column is-3" action="/login" method="post">
-    <input class="loginForm input" type="text" name="email" placeholder="Email Address">
-    <input class="loginForm input" type="text" name="password" placeholder="Password">
-    <button class="loginForm button">Log in</button>
-  </form>
-</div>
+  <div class="columns is-centered">
+    <form class="formBox column is-one-quarter" action="/login" method="post">
+      <h3 class="is-size-2 is-text-centered">Log In</h3>
+
+      <div class="field">
+        <label class="label">Email Address</label>
+        <div class="control has-icons-left">
+          <input class="input" type="email" placeholder="john@johnsmith.com">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Password</label>
+        <p class="control has-icons-left">
+          <input class="input" type="password" placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <button class="loginForm button">Log in</button>
+    </form>
+  </div>
