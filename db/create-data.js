@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const env = require('../config/environment');
 mongoose.connect(env.dbUri);
 
-const Exhibition = require('../models/Exhibition');
+const Exhibition = require('../models/exhibition');
 Exhibition.collection.drop();
 
 const exhibitionData = [
