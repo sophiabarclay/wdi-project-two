@@ -9,11 +9,11 @@
     </figure>
     <div class="showPageInfo">
       <p class="is-size-4"><%= location %> | <%= address %></p>
-      <p class="is-size-5"><%= startDate %> to <%= endDate %></p>
+      <p class="is-size-5">Ends <%= endDate %></p>
     </div>
     <div class="showPageButtons columns">
-      <a href="/exhibitions/<%= _id %>/edit"><i class="far fa-edit"></i></a>
-      <form class="" action="/exhibitions/<%= _id %>?_method=DELETE" method="post">
+      <a href="/upcomings/<%= _id %>/edit"><i class="far fa-edit"></i></a>
+      <form class="" action="/upcomings/<%= _id %>?_method=DELETE" method="post">
         <button><i class="far fa-trash-alt"></i></button>
       </form>
     </div>
@@ -23,7 +23,7 @@
   <%# COMMENT SECTION %>
   <div class="ratingSection column is-5">
     <% if(locals.isLoggedIn) { %>
-      <form action='/exhibitions/<%= id %>/ratings' method="post">
+      <form action='/upcomings/<%= id %>/ratings' method="post">
       <h3 class="is-size-4">Leave a review</h3>
       <div class="columns">
         <label class="has-text-right column is-4" for='user'>Username</label>
@@ -44,7 +44,7 @@
       </form>
       <% } else { %>
         <h3 class="is-size-4">Leave a review</h3>
-        <p>Please <a href="/login"><strong>log in</strong></a> to leave a review of this exhibition.</p>
+        <p>Please <a href="/login"><strong>log in</strong></a> to leave a review of this upcoming.</p>
       <% } %>
     <hr>
 
@@ -53,7 +53,7 @@
       <% ratings.forEach(rating => { %>
         <div class="ratingBox columns">
           <div class="ratingButton column is-1">
-            <form method="POST" action="/exhibitons/<%= _id %>/ratings/<%= rating._id %>?_method=DELETE">
+            <form method="POST" action="/upcomings/<%= _id %>/ratings/<%= rating._id %>?_method=DELETE">
               <button><i class="far fa-trash-alt"></i></button>
             </form>
           </div>
@@ -77,6 +77,3 @@
 
   </div>
 </div>
-
-<%# NOTE Show edit and delete buttons while user isLoggedIn ? best practice %>
-<%#  NOTE Comment vs Rating in Bulma class="" e.g. ratingBox ratingText %>

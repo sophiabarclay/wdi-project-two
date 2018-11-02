@@ -1,10 +1,10 @@
 <div class="navbar columns is-uppercase">
   <div class="navbar-brand">
-    <h1 class="title column is-size-1 logo"><a href="/">Photography London</a></h1>
+    <h1 class="title column is-size-1 logo"><a href="/">Photography Ldn</a></h1>
   </div>
   <div class="navbar-end">
     <% if(locals.isLoggedIn) { %>
-      <p class="column"><a href="/logout">Log Out</a></p>
+      <p class="column"><a href="/logout">Log Out <%= locals.currentUser.username %></a></p>
       <% } else { %>
         <p class="column"><a href="/login">Log In</a></p>
         <p class="column"><a href="/register">Register</a></p>

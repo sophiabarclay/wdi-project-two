@@ -3,6 +3,13 @@ body {
   color: black;
 }
 
+img {
+  object-fit: cover;
+}
+
+.indexImg:hover {
+  opacity: 0.4;
+}
 
 /* HEADER */
 a {
@@ -16,7 +23,9 @@ a {
 .logo {
   letter-spacing: -5px;
   word-spacing: 10px;
+  position: absolute;
 }
+
 /* FOOTER */
 .footer {
   background-color: white;
@@ -43,7 +52,7 @@ i:hover, p a:hover {
 
 /* SHOW PAGE */
 .ratingSection {
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 .ratingButton form button, .showPageButtons form button {
@@ -59,6 +68,7 @@ i:hover, p a:hover {
 }
 
 h3 {
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
