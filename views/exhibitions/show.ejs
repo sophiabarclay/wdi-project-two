@@ -53,7 +53,7 @@
       <% ratings.forEach(rating => { %>
         <div class="ratingBox columns">
           <div class="ratingButton column is-1">
-            <form method="POST" action="/exhibitons/<%= _id %>/ratings/<%= rating._id %>?_method=DELETE">
+            <form method="POST" action="/exhibitions/<%= _id %>/ratings/<%= rating._id %>?_method=DELETE">
               <button><i class="far fa-trash-alt"></i></button>
             </form>
           </div>

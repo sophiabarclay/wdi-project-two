@@ -11,14 +11,14 @@ function createRating(req, res) {
 }
 
 function deleteRating(req, res) {
-  console.log('deleting rating', req.paramas.ratingId);
+  console.log('deleting rating', req.params);
   Exhibition
-    .findById(req.params.exhibitionId)
+    .findById(req.params.id)
     .then(exhibition => {
       exhibition.ratings.id(req.params.ratingId).remove();
       exhibition
         .save()
-        .then(() => res.redirect(`/exhibitions/${req.params.exhibitionId}`));
+        .then(() => res.redirect(`/exhibitions/${req.params.id}`));
     });
 }
 
