@@ -12,7 +12,7 @@ Design a full-stack Node app that meets the following technical requirements:
 * The app should be styled with Bulma.
 
 ## Overview
-To be completed
+A fully RESTful Express app showcasing upcoming photography exhibitions in London. The app allows users to register, login and logout, add, edit and delete exhibitions, and add and delete comments on exhibitions.
 
 View on Heroku [here.](https://fierce-earth-26546.herokuapp.com/)
 
@@ -40,7 +40,8 @@ To be completed
 
 ### Challenges
 To be completed
-s
+
 ## Future Features
 * Make website mobile responsive
 * Auto input username when leaving a review of an exhibition
+* Limit ability to delete exhibitions and comments to user that created them
