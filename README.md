@@ -11,6 +11,8 @@ Design a full-stack Node app that meets the following technical requirements:
 * The app should include authentication - with encrypted passwords & an authorisation flow.
 * The app should be styled with Bulma.
 
+**Timeframe**: 1 week
+
 ## Overview
 A fully RESTful Express app showcasing upcoming photography exhibitions in London. The app allows users to register, login and logout, add, edit and delete exhibitions, and add and delete comments on exhibitions.
 
