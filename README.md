@@ -38,10 +38,10 @@ View on Heroku [here.](https://fierce-earth-26546.herokuapp.com/)
 ## Wins and Challenges
 
 ### Wins
-To be completed
+I'm particularly happy with the visual design I achieved here, given only a short amount of time to style. Having initially felt hesitant about using Bulma as the CSS framework for this project, having previously only worked in vanilla CSS, I made reading the Bulma documentation a priority. When it came to styling my work, I found the framework satisfying and surprisingly adaptable to use. Lesson learned - always stay open to new ways of working. 
 
 ### Challenges
-To be completed
+Reflecting on this project, I realise I could have integrated more features if I had been slightly more ambitious in my planning. While I am satisfied with how I outlined and reached my MVP, in future, I will create a wishlist of post-MVP features to keep at hand as a reminder of the potential scope of a project. This will encourage me to keep pushing against the upper limit of my expectations. 
 
 ## Future Features
 * Make website mobile responsive
