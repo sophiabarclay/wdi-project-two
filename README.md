@@ -14,9 +14,11 @@ Design a full-stack Node app that meets the following technical requirements:
 **Timeframe**: 1 week
 
 ## Overview
+View on Heroku [here.](https://fierce-earth-26546.herokuapp.com/)
+
 A fully RESTful Express app showcasing upcoming photography exhibitions in London. The app allows users to register, login and logout, add, edit and delete exhibitions, and add and delete comments on exhibitions.
 
-View on Heroku [here.](https://fierce-earth-26546.herokuapp.com/)
+![Landing Page](images/p2-Demo.gif)
 
 ## Technologies Used
 
@@ -30,10 +32,6 @@ View on Heroku [here.](https://fierce-earth-26546.herokuapp.com/)
 * EJS
 * MongoDB
 * NodeJS
-
-## Design
-
-![Landing Page](images/landing.png)
 
 ## Wins and Challenges
 
