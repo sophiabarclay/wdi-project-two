@@ -59,19 +59,18 @@ function checkAuthStatus(req, res, next) {
 
 #### Comments section:
 ```
-<div class="ratingSection column is-5">
-    <% if(locals.isLoggedIn) { %>
-      <form action='/exhibitions/<%= id %>/ratings' method="post">
-      <h3 class="is-size-4">Leave a review</h3>
-      <div class="columns">
-        <label class="has-text-right column is-4" for='user'>Username</label>
-        <b><input class="column is-8 input" name='user' value='<%= locals.currentUser.username %>'/></b>
-      </div>
-      ...
-    <% } else { %>
-        <h3 class="is-size-4">Leave a review</h3>
-        <p>Please <a href="/login"><strong>log in</strong></a> to leave a review of this exhibition.</p>
-    <% } %>
+<% if(locals.isLoggedIn) { %>
+    <h3 class="is-size-4">Leave a review</h3>
+    <div class="columns">
+      <label class="has-text-right column is-4" for='user'>Username</label>
+      <input class="column is-8 input" name='user' value='<%= locals.currentUser.username %>'/>
+    </div>
+...
+<% } else { %>
+    <h3 class="is-size-4">Leave a review</h3>
+    <p>Please <a href="/login"><strong>log in</strong></a> to leave a review of this exhibition.</p>
+<% } %>
+...
 ```
 
 
