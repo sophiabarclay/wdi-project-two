@@ -38,6 +38,43 @@ A fully RESTful Express app showcasing upcoming photography exhibitions in Londo
 ### Wins
 I'm particularly happy with the visual design I achieved here, given only a short amount of time to style. Having initially felt hesitant about using Bulma as the CSS framework for this project, having previously only worked in vanilla CSS, I made reading the Bulma documentation a priority. When it came to styling my work, I found the framework satisfying and surprisingly adaptable to use. Lesson learned - always stay open to new ways of working. 
 
+I am also pleased that I managed to implement session authentication in this project, as one of the more complex learnings of the lessons prior to commencing this project. By writing the checkAuthStatus function, I was able to check if the current user was logged in, and access the user's details (e.g usename). This was helpful in several sections of the project, one example being the comment section on the exhibition show pages, which would show either the option to leave a comment, or direct the user to log in depending on isLoggedIn being true or false.
+
+<pre>
+function checkAuthStatus(req, res, next) {
+  console.log('Incoming request', req.method, req.originalUrl);
+  if (req.session.userId) {
+    User.findById(req.session.userId)
+      .then(user => {
+        res.locals.currentUser = user;
+        res.locals.isLoggedIn = true;
+        console.log('==>', res.currentUser);
+        next();
+      });
+  } else {
+    next();
+  }
+}
+</pre>
+
+#### Comments section:
+<pre>
+<div class="ratingSection column is-5">
+    <b><% if(locals.isLoggedIn) { %></b>
+      <form action='/exhibitions/<%= id %>/ratings' method="post">
+      <h3 class="is-size-4">Leave a review</h3>
+      <div class="columns">
+        <label class="has-text-right column is-4" for='user'>Username</label>
+        <b><input class="column is-8 input" name='user' value='<%= locals.currentUser.username %>'/></b>
+      </div>
+      ...
+    <b><% } else { %></b>
+        <h3 class="is-size-4">Leave a review</h3>
+        <p>Please <a href="/login"><strong>log in</strong></a> to leave a review of this exhibition.</p>
+    <% } %>
+</pre>
+
+
 ### Challenges
 Reflecting on this project, I realise I could have integrated more features if I had been slightly more ambitious in my planning. While I am satisfied with how I outlined and reached my MVP, in future, I will create a wishlist of post-MVP features to keep at hand as a reminder of the potential scope of a project. This will encourage me to keep pushing against the upper limit of my expectations. 
 
