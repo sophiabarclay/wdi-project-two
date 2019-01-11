@@ -58,9 +58,9 @@ function checkAuthStatus(req, res, next) {
 </pre>
 
 #### Comments section:
-<pre>
+```
 <div class="ratingSection column is-5">
-    <b><% if(locals.isLoggedIn) { %></b>
+    <% if(locals.isLoggedIn) { %>
       <form action='/exhibitions/<%= id %>/ratings' method="post">
       <h3 class="is-size-4">Leave a review</h3>
       <div class="columns">
@@ -68,11 +68,11 @@ function checkAuthStatus(req, res, next) {
         <b><input class="column is-8 input" name='user' value='<%= locals.currentUser.username %>'/></b>
       </div>
       ...
-    <b><% } else { %></b>
+    <% } else { %>
         <h3 class="is-size-4">Leave a review</h3>
         <p>Please <a href="/login"><strong>log in</strong></a> to leave a review of this exhibition.</p>
     <% } %>
-</pre>
+```
 
 
 ### Challenges
